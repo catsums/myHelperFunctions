@@ -50,16 +50,17 @@ const DEFAULT = {
 };
 
 
-var config = {
+var configDev = {
 	resolve: DEFAULT.resolve,
 	entry: {
-	"cjs/index": "./lib/cjs/index.js",
-	"esm/index": "./lib/esm/index.mjs",
+	"index": "./lib/cjs/index.js",
+	// "cjs/index": "./lib/cjs/index.js",
+	// "esm/index": "./lib/esm/index.mjs",
 	},
 	output:{
-		path: path.resolve(__dirname, './lib/dist'),
+		path: path.resolve(__dirname, './lib/umd'),
 		publicPath: '/',
-		filename: "[name].js",
+		filename: "[name].dev.js",
 		globalObject: 'this',
 		library: {
 			name: "MY",
@@ -74,11 +75,12 @@ var config = {
 var configMin = {
 	resolve: DEFAULT.resolve,
 	entry: {
-		"cjs/index": "./lib/cjs/index.js",
-		"esm/index": "./lib/esm/index.mjs",
+		"index": "./lib/cjs/index.js",
+	// "cjs/index": "./lib/cjs/index.js",
+	// "esm/index": "./lib/esm/index.mjs",
 	},
 	output:{
-		path: path.resolve(__dirname, './lib/min'),
+		path: path.resolve(__dirname, './lib/umd'),
 		publicPath: '/',
 		filename: "[name].min.js",
 		globalObject: 'this',
@@ -93,5 +95,5 @@ var configMin = {
 };
 
 module.exports = [
-	config, configMin
+	configDev, configMin
 ];
