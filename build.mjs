@@ -42,19 +42,9 @@ let _default = {
 	plugins: [],
 	minify: false,
 	keepNames: true,
-	// external: Object.keys(dependencies),
 }
 
 let data = [
-	// {
-	// 	entryPoints: entry,
-	// 	bundle: true,
-	// 	outfile: 'lib/umd/index.js',
-	// 	format: "umd", // or "cjs"
-	// 	plugins: [umdWrapper({
-	// 		libraryName: "myLib",
-	// 	})],
-	// },
 	{
 		_id: `cjs`,
 		outdir: `${outDir}/cjs`,
