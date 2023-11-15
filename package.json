@@ -3,17 +3,17 @@
 	"version": "1.2.0",
 	"description": "A package for my helper functions in Node",
 	"types": "./lib/index.d.ts",
-	"main": "./lib/cjs/index.js",
-	"module": "./lib/esm/index.js",
+	"main": "./lib/browser/index.js",
+	"module": "./lib/index.js",
 	"exports": {
 		".": {
-			"require": "./lib/umd/index.js",
-			"import": "./lib/umd/index.js"
+			"require": "./lib/cjs/index.js",
+			"import": "./lib/esm/index.js"
 		}
 	},
 	"scripts": {
 		"bundle": "node --loader ts-node/esm build.mjs",
-		"build": "node --loader ts-node/esm build.mjs --production"
+		"build": "npm run bundle"
 	},
 	"keywords": [],
 	"author": "catsums",
