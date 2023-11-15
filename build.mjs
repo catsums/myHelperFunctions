@@ -67,11 +67,9 @@ let data = [
 		platform: "neutral",
 	},
 	{
-		_id: `umd`,
-		outdir: `${outDir}/umd`,
-		plugins: [umdWrapper({
-			libraryName: "MY",
-		})],
+		_id: `browser`,
+		outdir: `${outDir}/browser`,
+		platform: "browser",
 	},
 ];
 
