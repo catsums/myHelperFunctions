@@ -56,11 +56,7 @@ let data = [
 		outdir: `${outDir}/esm`,
 		platform: "neutral",
 	},
-	{
-		_id: `browser`,
-		outdir: `${outDir}/browser`,
-		platform: "browser",
-	},
+	 
 ];
 
 async function Build(){
