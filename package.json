@@ -15,7 +15,7 @@
         "bundle": "node --loader ts-node/esm build.mjs",
         "build": "npm run bundle",
         "update": "node update.mjs",
-		"publish": "npm publish --access public"
+		"npm-publish": "npm publish --access public"
     },
     "keywords": [],
     "author": "catsums",
