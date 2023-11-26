@@ -68,8 +68,10 @@ async function Build(){
 
 	// await fs.promises.rm(`${outDir}`, {recursive: true, force: true});
 
-	for (const file of await fs.promises.readdir(`${outDir}`)) {
-		await fs.promises.rm(path.join(`${outDir}`, file), {recursive: true, force: true});
+	if(fs.existsSync(`${outDir}`)){
+		for (const file of await fs.promises.readdir(`${outDir}`)) {
+			await fs.promises.rm(path.join(`${outDir}`, file), {recursive: true, force: true});
+		}
 	}
 
 	let cmd = `tsc --outDir ${outDir}${Settings.watch ? ' --watch':''}`;
